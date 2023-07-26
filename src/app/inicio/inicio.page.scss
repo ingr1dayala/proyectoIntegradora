@@ -1,0 +1,141 @@
+.menu-page {
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    ion-button {
+        width: 100%;
+        height: 0;
+        padding-top: 100%;
+        border-radius: 0;
+      }
+      
+      ion-button img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+  }
+  
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 25px;
+    background-color: #FFD89C;
+  }
+  
+.ion-content {
+  background: url(../../assets/icon/sinfondo.png) no-repeat center center fixed;
+  background: #FFD89C; /* Establece un color de fondo */
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    user-select: none;
+  }
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+  .section {
+    padding: 70px 0;
+  }
+  .container {
+    max-width: 375px;
+    margin: 0 auto;
+    --background: #FFD89C;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+  }
+  .card {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    --background: #FFD89C;
+  }
+  .card__image {
+    position: absolute;
+    max-width: 120%;
+    left: -15%;
+    right: 10;
+    margin: 0 auto;
+    top: -18%;
+    z-index: 2;
+    transition: all 0.3s ease-out;
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+  }
+  .card__data {
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #f5cd2e;
+    padding-top: calc(100% * 1.18);
+    transition: all 0.3s ease-out 0.1s;
+  }
+  .card__info {
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+  .card__info h2 {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .card__info p {
+    font-size: 10px;
+    line-height: 14px;
+    color: #a2a2a2;
+  }
+  .card__action {
+    display: grid;
+    grid-template: 30px / 1fr 35px;
+  }
+  .card__price {
+    height: 30px;
+    padding: 0 10px 0 20px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+  }
+  .card__add {
+    overflow: hidden;
+    width: 35px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    position: sticky;
+    background-color: #222222;
+    border: none;
+    color: #fff;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease-in;
+  }
+  .card__add:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+  }
+  .card__add:active {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  .card:hover .card__image {
+    top: -20%;
+    
+  }
+  .card:hover .card__data {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }

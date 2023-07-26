@@ -1,0 +1,50 @@
+.content-container {
+    display: flex;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Opcional: Ajusta la altura según tus necesidades */
+    background: #FAD1A0 url('../../assets/yommy/fondo.png')
+  }
+  
+  
+.encabezado {
+    height: 80px;
+  }S
+
+  .logo {
+  
+ 
+    width: 120px; /* Tamaño deseado para el logotipo */
+      
+     
+    height: auto; /* Mantener la proporción original */
+      
+     
+    position: absolute; /* Posicionamiento absoluto */
+      
+     
+    top: 50%; /* Alinear verticalmente al centro */
+      
+     
+    left: 0; /* Alinear a la izquierda */
+      
+    
+    }
+    
+  
+  
+.img2{
+    width: 20%;
+    height: 10%;
+    object-fit: fill;
+    
+      }
+
+.ion-content {
+        --background: #FFD89C; /* Establece un color de fondo */
+}
+
+
+      
