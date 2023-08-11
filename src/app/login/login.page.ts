@@ -35,29 +35,31 @@ export class LoginPage implements OnInit {
   ngOnInit() {
   }
 
-  loginWithFingerprint() {
-    NativeBiometric.isAvailable().then((result: AvailableResult) => {
-      const isAvailable = result.isAvailable;
+  async performBiometricVErification() {
+   // NativeBiometric.isAvailable().then((result: AvailableResult) => {
+      const result = await NativeBiometric.isAvailable();
 
-      if (isAvailable) {
-        NativeBiometric.verifyIdentity({
+      if (!result.isAvailable) return;
+
+      //const isFingerprint = result.biometryType == BiometryType.FINGERPRINT;
+
+       const verified = await  NativeBiometric.verifyIdentity({
           reason: 'For easy log in',
           title: 'Log in',
-          subtitle: 'Maybe add subtitle here?',
-          description: 'Maybe a description too?',
+          subtitle: 'Log in to your account',
+          description: 'YOMMY',
         })
           .then(() => {
             // Autenticación exitosa con huella dactilar
             console.log('Autenticación exitosa con huella dactilar');
             // Aquí puedes realizar el proceso de inicio de sesión
-            //this.authService.loginWithFingerprint();
+              this.router.navigateByUrl('/inicio');
+            
           })
           .catch((error: any) => {
             // Error en la autenticación con huella dactilar
             console.error('Error en la autenticación con huella dactilar', error);
           });
       }
-    });
-  }
-}
+    };
 
